@@ -90,9 +90,11 @@ public class Admin  extends JFrame implements ActionListener  {
                  String s="select * from admin where username='"+name+"' and password= '"+pass+"'";
                  ResultSet rest=obj.stm.executeQuery(s);
                  if(rest.next())
+                     
+                     
                  {
-                     System.out.println("Admin Section");
-                      //new AdminSection().setVisible(true);
+                     //System.out.println("Admin Section");
+                      new AdminSection().setVisible(true);
                      this.setVisible(false);
                      
                  }

@@ -9,12 +9,13 @@ import java.sql.*;
  * @author rahil
  */
 public class ConnectionClass {
+    
     Connection con;
     Statement stm;
     ConnectionClass(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Library","root","Rahil123");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root" ,"Atharva123");
             stm = con.createStatement();
         }
         catch(Exception e){
