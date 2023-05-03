@@ -93,8 +93,11 @@ public class Admin  extends JFrame implements ActionListener  {
                      
                      
                  {
-                     //System.out.println("Admin Section");
+                     //System.out.println("Admin Section")
                       new AdminSection().setVisible(true);
+
+                     new AdminSection().setVisible(true);
+
                      this.setVisible(false);
                      
                  }
