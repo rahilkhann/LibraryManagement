@@ -14,7 +14,7 @@ public class ConnectionClass {
     ConnectionClass(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Library","root","Rahil123");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","12345");
             stm = con.createStatement();
         }
         catch(Exception e){
