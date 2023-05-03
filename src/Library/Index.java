@@ -73,7 +73,7 @@ public class Index extends JFrame implements ActionListener {
     }
     public void actionPerformed(ActionEvent e){
         if(e.getSource()==bt1){
-           //new Admin().setVisible(true);
+           new Admin().setVisible(true);
            this.setVisible(false);
         }
         if(e.getSource()==bt2){
