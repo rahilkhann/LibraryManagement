@@ -83,8 +83,7 @@ public class AdminSection extends JFrame implements ActionListener {
         String comnd=e.getActionCommand();
         if(comnd.equals("Add Librarian"))
         { 
-            System.out.println("addLibrarian");
-            //new AddLibrarian().setVisible(true);
+            new AddLibrarian().setVisible(true);
             
         }
         else if (comnd.equals("View Librarian"))
