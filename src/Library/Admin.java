@@ -79,7 +79,21 @@ public class Admin  extends JFrame implements ActionListener  {
      public void actionPerformed(ActionEvent e)
      
      {
-     
+         String name = tf1.getText();
+         String pass = pf1.getText();
+         
+         if(e.getSource()==bt1){
+             try
+             {
+                
+             }catch(Exception ee)
+             {
+                ee.printStackTrace();
+             }
+         }
+         if(e.getSource()==bt2){
+             
+         }
      }
      public static void main(String[] args){
                  new Index().setVisible(true);
