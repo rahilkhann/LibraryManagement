@@ -8,6 +8,7 @@ package Library;
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
+import java.sql.*;
 /**
  *
  * @author vetal
@@ -85,14 +86,29 @@ public class Admin  extends JFrame implements ActionListener  {
          if(e.getSource()==bt1){
              try
              {
-                
+                 ConnectionClass obj=new ConnectionClass ();
+                 String s="select * from admin where username='"+name+"' and password= '"+pass+"'";
+                 ResultSet rest=obj.stm.executeQuery(s);
+                 if(rest.next())
+                 {
+                     System.out.println("Admin Section");
+                      //new AdminSection().setVisible(true);
+                     this.setVisible(false);
+                     
+                 }
+                 else
+                 {
+                     JOptionPane.showMessageDialog(null, "Your Name And Password Is Wrong!");
+                     this.setVisible(false);
+                     this.setVisible(true);
+                 }
              }catch(Exception ee)
              {
                 ee.printStackTrace();
              }
          }
          if(e.getSource()==bt2){
-             
+             this.setVisible(false);
          }
      }
      public static void main(String[] args){
