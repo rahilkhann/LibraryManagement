@@ -100,7 +100,7 @@ public class AddLibrarian extends JFrame implements ActionListener {
         
         setLayout(new BorderLayout(10,10));
         add(p1,"North");
-        add(p1,"Center");
+        add(p2,"Center");
         
     }
     
@@ -118,7 +118,7 @@ public class AddLibrarian extends JFrame implements ActionListener {
             try
             {
                 ConnectionClass obj=new ConnectionClass();
-                String q="insert into librarian(name, password, email, contact, address, city) values('"+name+"','"+pass+"','"+email+"','"+contact"','"+add"','"+city+"')";
+                String q="insert into librarian(name, password, email, contact, address, city) values('"+name+"','"+pass+"','"+email+"','"+contact+"','"+add+"','"+city+"')";
                 int aa=obj.stm.executeUpdate(q);
                 if(aa==1)
                 {
