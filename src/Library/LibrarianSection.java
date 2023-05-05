@@ -103,7 +103,7 @@ public class LibrarianSection extends JFrame implements ActionListener {
         } 
          else if (comnd.equals("View Book "))
         {
-            new ViewIssueBook().setVisible(true);
+           // new ViewIssueBook().setVisible(true);
         } 
            
             else if (comnd.equals("View Book "))
@@ -112,7 +112,7 @@ public class LibrarianSection extends JFrame implements ActionListener {
         } 
             else if (comnd.equals("View Book "))
         {
-            new ReturnBook().setVisible(true);
+           // new ReturnBook().setVisible(true);
         } 
          else if (comnd.equals("View Book "))
         {
