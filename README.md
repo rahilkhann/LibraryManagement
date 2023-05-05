@@ -1,6 +1,6 @@
 # Library Management System
 
-Library Management System is a computerized system that aims to automate the daily work of a library. It helps students and library managers keep a constant track of all the books available in the library, as well as maintain the details of users/students who borrow books.
+Our team has created a project based on Java, NetBeans and MySQL, titled "__Library Management System__" , which is a computerized system that aims to automate the daily work of a library. It helps students and library managers keep a constant track of all the books available in the library, as well as maintain the details of users/students who borrow books.
 
 ## Table of Contents
 
