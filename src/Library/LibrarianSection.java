@@ -101,18 +101,18 @@ public class LibrarianSection extends JFrame implements ActionListener {
         {
             new ViewBook().setVisible(true);
         } 
-         else if (comnd.equals("View Book "))
+         else if (comnd.equals("View Issued Books"))
         {
-           // new ViewIssueBook().setVisible(true);
+           new ViewIssueBook().setVisible(true);
         } 
            
-            else if (comnd.equals("View Book "))
+            else if (comnd.equals("Issue Book "))
         {
             new IssueBook().setVisible(true);
         } 
-            else if (comnd.equals("View Book "))
+            else if (comnd.equals("Return Book "))
         {
-           // new ReturnBook().setVisible(true);
+           new ReturnBook().setVisible(true);
         } 
          else if (comnd.equals("View Book "))
         {

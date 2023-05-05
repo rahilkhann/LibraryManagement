@@ -77,7 +77,7 @@ public class Index extends JFrame implements ActionListener {
            this.setVisible(false);
         }
         if(e.getSource()==bt2){
-           //new Librarian().setVisible(true);
+           new Librarian().setVisible(true);
            this.setVisible(false);
         }
 }
