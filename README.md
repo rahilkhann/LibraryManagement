@@ -11,15 +11,15 @@ Library Management System is a computerized system that aims to automate the dai
 
 ## Features
 
-. Display a list of all books available in the library.
-. Maintain the details of users/students to whom books have been issued.
-. Record the issued date and return date of the books.
+1. display a list of all books available in the library.
+2. Maintain the details of users/students to whom books have been issued.
+3. Record the issued date and return date of the books.
 
 ## Technologies Used
 
-. Java
-. MySQL
-. NetBeans
+1. Java
+2. MySQL
+3. NetBeans
 
 ## Setup Instructions
 
