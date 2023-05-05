@@ -3,35 +3,33 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Library;
-
-
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 import java.sql.*;
 /**
  *
- * @author vetal
+ * @author rahil
  */
-public class Admin  extends JFrame implements ActionListener  {
+public class Librarian  extends JFrame implements ActionListener  
+{
     JLabel l1,l2,l3;
     JButton bt1,bt2;
     JPanel p1,p2;
     Font f,f1;
     JTextField tf1;
     JPasswordField pf1;
-    Admin()
     
+    Librarian()
     {
-        
-        super("Admin Login Page");
+        super("Librarian Login Page");
         setLocation(450,400);
         setSize(500,200);
         
         f=new Font ("Arial",Font.BOLD,25);
         f1 = new Font("Arial", Font.BOLD, 20);
         
-        l1=new JLabel("Admin Login ");
+        l1=new JLabel("Librarian Login ");
         l2 = new JLabel("Name");
         l3 = new JLabel("Password");
         
@@ -73,31 +71,23 @@ public class Admin  extends JFrame implements ActionListener  {
         add(p1, "North");
         add(p2, "Center");
         
-            
-
     }
-    
-     public void actionPerformed(ActionEvent e)
-     
-     {
-         String name = tf1.getText();
-         String pass = pf1.getText();
-         
-         if(e.getSource()==bt1){
-             try
+    public void actionPerformed(ActionEvent e)
+    {
+        String name = tf1.getText();
+        String pass = pf1.getText();
+        
+        if(e.getSource()==bt1)
+        {
+            try
              {
                  ConnectionClass obj=new ConnectionClass ();
-                 String s="select * from admin where username='"+name+"' and password= '"+pass+"'";
+                 String s="select name, password from librarian where name='"+name+"' and password= '"+pass+"'";
                  ResultSet rest=obj.stm.executeQuery(s);
-                 if(rest.next())
-                     
-                     
+                 if(rest.next())    
                  {
                      //System.out.println("Admin Section")
-                      new AdminSection().setVisible(true);
-
-                     new AdminSection().setVisible(true);
-
+                     new LibrarianSection().setVisible(true);
                      this.setVisible(false);
                      
                  }
@@ -107,22 +97,18 @@ public class Admin  extends JFrame implements ActionListener  {
                      this.setVisible(false);
                      this.setVisible(true);
                  }
-             }catch(Exception ee)
+        }catch(Exception ee)
              {
                 ee.printStackTrace();
              }
-         }
-         if(e.getSource()==bt2){
+            if(e.getSource()==bt2){
              this.setVisible(false);
          }
-     }
-     public static void main(String[] args){
-                 new Admin().setVisible(true);
+    }
 
-         
-     
-     
-     }
-         
-    
+}
+    public static void main(String[] args)
+    {
+                 new Librarian().setVisible(true);
+    }             
 }

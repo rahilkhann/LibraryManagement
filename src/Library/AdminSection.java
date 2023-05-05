@@ -24,7 +24,7 @@ public class AdminSection extends JFrame implements ActionListener {
     AdminSection()
     {
         super("Admin Page");
-        setLocation(0,0);
+        setLocation(0,0);    
         setSize(1500,800);    
         
         f=new Font ("Arial",Font.BOLD,25);
@@ -89,12 +89,12 @@ public class AdminSection extends JFrame implements ActionListener {
         else if (comnd.equals("View Librarian"))
         {
             System.out.println("viewLibrarian");
-            //new ViewLibrarian().setVisible(true);
+            new ViewLibrarian().setVisible(true);
         }
         else if (comnd.equals("Delete Librarian"))
         {
             System.out.println("deleteLibrarian");
-            //new DeleteLibrarian().setVisible(true);
+              new DeleteLibrarian().setVisible(true);
         }
         else if (comnd.equals("Logout"))
         {
