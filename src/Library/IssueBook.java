@@ -13,7 +13,7 @@ public class IssueBook extends JFrame implements ActionListener{
     Choice ch;
     JTextField tf1,tf2,tf3,tf4,tf5,tf6;
     
-    IssueBook()
+ IssueBook()
     {
         super("IssueBook");
         setSize(650,400);
@@ -81,10 +81,18 @@ public class IssueBook extends JFrame implements ActionListener{
             e.printStackTrace();
         }
         ch.setFont(f1);
-        p1 = new JPanel();
-        p1.setLayout(new GridLayout(8,2,10,10));
+        
+        p1=new JPanel();
+        p1.setLayout(new GridLayout(1,1,10,10));
+        p1.add(l1);
+        p1.setBackground(Color.BLUE);
+        
+        
+        
         
         p2 = new JPanel();
+        p2.setLayout(new GridLayout(8,2,10,10));
+        
         p2.add(l2);
         p2.add(ch);
         p2.add(l3);
@@ -98,7 +106,10 @@ public class IssueBook extends JFrame implements ActionListener{
         p2.add(l7);
         p2.add(tf5);
         p2.add(l8);
-        p2.add(l2);
+        p2.add(tf6);
+        p2.add(bt1);
+        p2.add(bt2);
+        
         
         setLayout(new BorderLayout(10,10));
         add(p1,"North");
@@ -112,7 +123,7 @@ public class IssueBook extends JFrame implements ActionListener{
                         {
                             ConnectionClass obj2 = new ConnectionClass();
                             int id= Integer.parseInt(ch.getSelectedItem());
-                            String q1 = "SELECT * FROM addbook WHERE id='"+id+",";
+                           String q1 = "SELECT * FROM addbook WHERE id='"+id+"'";
                             ResultSet rest1 = obj2.stm.executeQuery(q1);
                             while(rest1.next())
                             {
@@ -142,12 +153,78 @@ public class IssueBook extends JFrame implements ActionListener{
             String stuname = tf4.getText();
             String stucont = tf5.getText();
             String date = new java.util.Date().toString();
+            
+
+            
+            
+        
             try
             {
+                ConnectionClass obj3 = new ConnectionClass();
+                String q0 = "select quantity from addbook where id = '"+id+"' ";
+                ResultSet rest0 = obj3.stm.executeQuery(q0);
+                while(rest0.next())
+                {
+                    qnt = Integer.parseInt(rest0.getString("quantity"));
+                }
+                if(qnt<=0)
+                {
+                    JOptionPane.showMessageDialog(null, "Book quantiy is less! can't issue");
+                    this.setVisible(false);
+                }
+                else
+                {
+                    String q2 = "insert into issuebook(BookId,bookno,bookname,studentId,studentname,studentcontact,date)value('"+id+"' , '"+bookname+"' , '"+stuid+"', '"+stuname+"', '"+stucont+"' ,'"+date+"' )";
+                   String q3 = "update addbook set issued=issued+1 where id = '"+id+"'";
+                    String q4 = "update addbook set quantity=quantity-1 where id = '"+id+"'";
+                    int aa = obj3.stm.executeUpdate(q2);
+                    int aaa = obj3.stm.executeUpdate(q3);
+                    int aaaa = obj3.stm.executeUpdate(q4);
+                    if(aa==1)
+                    {
+                      if(aaa==1)
+                      {
+                        if(aaaa==1)
+                        {
+                            
+                            
+                            JOptionPane.showMessageDialog(null,"your data successfully update");
+                            this.setVisible(false);
+                            
+                      }else{
+                            JOptionPane.showMessageDialog(null,"Please!, Fill all details carefully");
+                        }}
+                      
+                      else
+                      {
+                           JOptionPane.showMessageDialog(null,"Please!, Fill all details carefully");
+                      }
+
+                    }
+                    else
+                    {
+                          JOptionPane.showMessageDialog(null,"Please!, Fill all details carefully");
+
+                    }
+                    
+
+
+                    
+
+                }
                 
             }catch(Exception exx)
             {
                 exx.printStackTrace();
             }
+          if(e.getSource()==bt2)
+    {
+        JOptionPane.showMessageDialog(null, "Are you sure?");
+        this.setVisible(false);
+    }
         }
+    public static void main(String[] args)
+    {
+        new IssueBook().setVisible(true);
+    }
 }
