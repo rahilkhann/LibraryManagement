@@ -24,7 +24,7 @@ public class AdminSection extends JFrame implements ActionListener {
     AdminSection()
     {
         super("Admin Page");
-        setLocation(0,0);
+        setLocation(0,0);    
         setSize(1500,800);    
         
         f=new Font ("Arial",Font.BOLD,25);
