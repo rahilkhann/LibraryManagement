@@ -64,6 +64,7 @@ public class LibrarianSection extends JFrame implements ActionListener {
         men2.setFont(f);
         men3.setFont(f);
         men4.setFont(f);
+        men5.setFont(f);
         
         ment1.setFont(f1);
         ment2.setFont(f1);
@@ -101,10 +102,14 @@ public class LibrarianSection extends JFrame implements ActionListener {
         {
             new ViewBook().setVisible(true);
         } 
+<<<<<<< HEAD
          else if (comnd.equals("View Issued Books"))
         {
            new ViewIssueBook().setVisible(true);
         } 
+=======
+     
+>>>>>>> 1359cfa1a7cb094de76ad3223564e6b13a70d170
            
             else if (comnd.equals("Issue Book "))
         {
@@ -112,7 +117,11 @@ public class LibrarianSection extends JFrame implements ActionListener {
         } 
             else if (comnd.equals("Return Book "))
         {
+<<<<<<< HEAD
            new ReturnBook().setVisible(true);
+=======
+            new ReturnBook().setVisible(true);
+>>>>>>> 1359cfa1a7cb094de76ad3223564e6b13a70d170
         } 
          else if (comnd.equals("View Book "))
         {

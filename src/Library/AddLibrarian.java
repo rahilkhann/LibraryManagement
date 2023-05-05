@@ -118,9 +118,10 @@ public class AddLibrarian extends JFrame implements ActionListener {
             try
             {
                 ConnectionClass obj=new ConnectionClass();
-            String q = "INSERT INTO librarian(name, password, email, contact, address, city) " + 
-           "VALUES('" + name + "','" + pass + "','" + email + "','" + contact + "','" + add + "','" + city + "')";
-int aa = obj.stm.executeUpdate(q);
+                String q = "INSERT INTO librarian(name, password, email, contact, address, city) " + 
+                "VALUES('" + name + "','" + pass + "','" + email + "','" + contact + "','" + add + "','" + city + "')";
+                 int aa = obj.stm.executeUpdate(q);
+
                 if(aa==1)
                 {
                     JOptionPane.showMessageDialog(null, "Your data is successfully inserted");
