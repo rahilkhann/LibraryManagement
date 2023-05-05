@@ -1,4 +1,3 @@
-
 package Library;
 import java.awt.event.*;
 import java.awt.*;
@@ -153,11 +152,9 @@ public class IssueBook extends JFrame implements ActionListener{
             String stuname = tf4.getText();
             String stucont = tf5.getText();
             String date = new java.util.Date().toString();
+                     
             
-
-            
-            
-        
+            if(e.getSource()==bt1){
             try
             {
                 ConnectionClass obj3 = new ConnectionClass();
@@ -174,8 +171,8 @@ public class IssueBook extends JFrame implements ActionListener{
                 }
                 else
                 {
-                    String q2 = "insert into issuebook(BookId,bookno,bookname,studentId,studentname,studentcontact,date)value('"+id+"' , '"+bookname+"' , '"+stuid+"', '"+stuname+"', '"+stucont+"' ,'"+date+"' )";
-                   String q3 = "update addbook set issued=issued+1 where id = '"+id+"'";
+                    String q2 = "insert into issuebook(BookId,bookno,bookname,studentId,studentname,studentcontact,date)values('"+id+"','"+bookno+"' , '"+bookname+"' , '"+stuid+"', '"+stuname+"', '"+stucont+"' ,'"+date+"' )";
+                    String q3 = "update addbook set issuebook=issuebook+1 where id = '"+id+"'";
                     String q4 = "update addbook set quantity=quantity-1 where id = '"+id+"'";
                     int aa = obj3.stm.executeUpdate(q2);
                     int aaa = obj3.stm.executeUpdate(q3);
@@ -216,6 +213,7 @@ public class IssueBook extends JFrame implements ActionListener{
             }catch(Exception exx)
             {
                 exx.printStackTrace();
+            }
             }
           if(e.getSource()==bt2)
     {

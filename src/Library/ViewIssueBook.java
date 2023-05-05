@@ -16,7 +16,7 @@ public class ViewIssueBook extends JFrame {
     
     ViewIssueBook()
     {
-        super("Book Information");
+        super("Issued Books");
         setLocation(1,1);
         setSize(1000,400);
         

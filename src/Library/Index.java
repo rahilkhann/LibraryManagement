@@ -10,7 +10,7 @@ import java.awt.*;
 import javax.swing.*;
 /**
  *
- * @author rahil
+ * @author rahil, amrita and atharva
  */
 public class Index extends JFrame implements ActionListener {
     JLabel l1,l2,l3,l4;
