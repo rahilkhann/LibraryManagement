@@ -4,16 +4,18 @@ Library Management System is a computerized system that aims to automate the dai
 
 ## Table of Contents
 
-. Features
-. Technologies Used
-. Setup Instructions
-. Usage
+* Features
+* Technologies Used
+* Setup Instructions
+* Usage
 
 ## Features
 
-1. display a list of all books available in the library.
-2. Maintain the details of users/students to whom books have been issued.
-3. Record the issued date and return date of the books.
+1. An Admin account and a Librarian account. 
+2. Display a list of all books available in the library.
+3. Maintain the details of users/students to whom books have been issued.
+4. Record the issued date and return date of the books.
+5. Update the quantity of books in the library system whenever a book is issued/ returned.
 
 ## Technologies Used
 
