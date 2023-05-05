@@ -2,6 +2,12 @@
 
 Our team has created a project based on Java, NetBeans and MySQL, titled "__Library Management System__" , which is a computerized system that aims to automate the daily work of a library. It helps students and library managers keep a constant track of all the books available in the library, as well as maintain the details of users/students who borrow books.
 
+## Team Members
+
+1. Amrita Veshin 
+2. Atharva Vetal
+3. Rahil Khan
+
 ## Table of Contents
 
 * Features
