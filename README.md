@@ -51,6 +51,14 @@ To run the application, execute the following command:
 
 ```java -jar target/library-management-system-1.0-SNAPSHOT.jar```
 
+## Modules Within The Library Management System
+### Admin Panel                                                                                      
+![image](https://github.com/rahilkhann/LibraryManagement/assets/118504154/3a217cbe-a25c-44aa-b737-3217b7531d0d)
+![image](https://github.com/rahilkhann/LibraryManagement/assets/118504154/bad4510e-0e4b-4b82-b828-d823a1ebdf30)
+![image](https://github.com/rahilkhann/LibraryManagement/assets/118504154/e377a452-5387-4ca9-b0a0-ad78dbc7f218)
+![Uploading image.png…]()
+                                                                                   
+
 
 
 
